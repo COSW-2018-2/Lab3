@@ -18,9 +18,9 @@
             </li>
         </ul>
 
-        <form (ngSubmit) = "messsage()" class="form-inline my-2 my-lg-0" #navForm = "ngForm">
+        <form #navForm = "ngForm" class="form-inline my-2 my-lg-0" (ngSubmit) = "messsage()">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="messageFunc(message)">Search</button>
         </form>
     </div>
 </nav>
@@ -28,3 +28,12 @@
 <div class="container">
     <router-outlet></router-outlet>
 </div>
+
+<ng-template #message>
+    <div class="modal-header">
+        <h3> Error </h3>
+    </div>
+    <div class= "modal-body">
+        <h5> This feature is not implemented yet. Sorry for the inconvenience </h5>
+    </div>
+</ng-template>

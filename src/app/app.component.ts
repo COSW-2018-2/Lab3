@@ -1,5 +1,6 @@
 import{Component}from'@angular/core';
 import {FormGroup, FormBuilder} from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -10,8 +11,11 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 export class AppComponent {
   title = 'app';
 
+  constructor(private modal:NgbModal){}
 
-
+  messageFunc(message){
+    this.modal.open(message)
+  }
 
 }
 
