@@ -1,2 +1,7 @@
-/* SystemJS module definition */declarevarmodule:NodeModule;interfaceNodeModule{id: string;
+/* SystemJS module definition */
+
+declare var module: NodeModule;
+
+interface NodeModule {
+    id: string;
 }
