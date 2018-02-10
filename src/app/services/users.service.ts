@@ -38,7 +38,6 @@ private resourceUrl = 'user';
   } 
 
   filterByEmail(email :string){
-    console.log(this.resourceUrl+"/filter/"+email)
     return this.get(this.resourceUrl+"/filter/"+email)
     
   }

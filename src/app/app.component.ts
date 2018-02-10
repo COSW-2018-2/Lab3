@@ -32,13 +32,8 @@ export class AppComponent {
   messageFunc(message){
     /*this.modal.open(message)*/
     this.usersService.filterByEmail(this.emailToSearch).subscribe (
-      listFilter => {this.modalChange="<div>username: "+listFilter.username+
-                      "</div><div>email: "+listFilter.email+
-                      "</div><div>firstname: "+listFilter.firstname+
-                      "</div><div>lastname: "+listFilter.lastname+
-                      "</div><div>image: <img src='"+listFilter.image
-                      +"' width='150' height='150' /></div>";
-                    }, 
+      listFilter => {this.modalChange= "<table><tr><td><div>Name: "+listFilter.firstname+"</div><div>Last Name: "+listFilter.lastname+"</div><div>Username: "+listFilter.username+"</div><div>E-mail: "+listFilter.email+"</div></td><td><div><img src='"+listFilter.image+"' width='100' height='100'/></div></td></tr></table>";
+                    },
                     error => {
                         this.modalChange="<div>No user found with the email address</div>";
                     }      
